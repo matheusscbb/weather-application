@@ -30,7 +30,7 @@ Others benefits is useEffect and useState, that made easy to control states and 
 
 ## Atomic Design
 
-Is a good and popular way to structure your components, separating in atoms, molecules and organisms to generate cleans pages and make easier to reuse.  
+Is a good and popular way to structure your components, separating in atoms, molecules and organisms to generate cleans pages and make easier to reuse. It's included in this structure templates.  
 There is an explanation about all types of components inside your respective folders.  
 
 ## Google Map React
@@ -47,7 +47,7 @@ Every request must be separated by type in files inside service folder.
 To combinate with google maps I used material design to customize the components. Using a library like Material or Bootstrap you guarantees a visual pattern and a 
 ready documentation, making easier to teach news members how to create news components.  
 A recommended way to use CSS with Material UI is styled component, besides you earn scoped styles and no-class policy that make easy to not expert CSS members to alter a component without break others, have sass and polished support and possibility to server-side rendering.  
-Materiaul UI can be Themify in future if need some default css differents.  
+Materiaul UI can be Themify in future if need some default css differents.  x
 You can learn more in [Material UI DOC](https://material-ui.com/).
 
 ## Utils
@@ -71,6 +71,7 @@ The most popular, updated and complete, they are working into a new hook-based A
 * I don't put `<Typography/>` material component in all text of custom components, but putting is the right use.
 * To keep a component with a minimum documentation is add a READ.ME for everyone, but this normally isn't accept by the time wasted caring about this files, so another way is commenting all props inside a component. The next step for this project is take one of this option for rule.  
 * A good improvement for this application is take more care about HTML semanctic and changing the base for Next.js, to get a server side rendering so having better SEO.
+* Lastly I added `<MapsContainer/>` inside another page, showing the easy way to reuse and adapt.
 
 # LICENSE
 

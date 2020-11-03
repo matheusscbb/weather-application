@@ -7,24 +7,25 @@ import { Typography } from "@material-ui/core";
 import WeatherTemperature from "../atoms/WeatherTemperature/WeatherTemperature";
 import CardComponent from "../atoms/CardComponent/CardComponent";
 import WeatherWind from "../atoms/WeatherWind/WeatherWind";
+import MapsContainer from "../molecules/MapsContainer/MapsContainer";
 
 const useStyles = makeStyles({
   container: {
     padding: "20px 50px",
 
     "& h6": {
-      marginBottom: 60
+      marginBottom: 60,
     },
 
     "@media(max-width: 600px)": {
       padding: "20px 0 0",
       width: "90%",
       margin: "auto",
-    }
+    },
   },
   cardArea: {
     display: "grid",
-    gridTemplateColumns : "repeat(2, 1fr)",
+    gridTemplateColumns: "repeat(2, 1fr)",
     gap: "20px",
 
     padding: 20,
@@ -32,8 +33,11 @@ const useStyles = makeStyles({
     backgroundColor: "#f1f1f1",
 
     "@media(max-width: 800px)": {
-      gridTemplateColumns : "1fr",
-    }
+      gridTemplateColumns: "1fr",
+    },
+  },
+  mapContainer: {
+    padding: 50,
   },
 });
 
@@ -48,7 +52,7 @@ const DetailPage = () => {
   useEffect(() => {
     if (location) {
       if (!location.state) {
-        history.push("/")
+        history.push("/");
         return;
       }
 
@@ -59,25 +63,49 @@ const DetailPage = () => {
   }, [location, history]);
 
   return (
-    <section className={classes.container}>
-      <Typography component="h1" variant="h2">
-        {city?.name} <small>({city?.sys.country})</small>
-      </Typography>
+    <>
+      <section className={classes.container}>
+        <Typography component="h1" variant="h2">
+          {city?.name} <small>({city?.sys.country})</small>
+        </Typography>
 
-      <Typography component="h6" variant="h6" gutterBottom>
-        {`Latitude: ${city?.coord.lat} Longitude: ${city?.coord.lon}`}
-      </Typography>
+        <Typography component="h6" variant="h6" gutterBottom>
+          {`Latitude: ${city?.coord.lat} Longitude: ${city?.coord.lon}`}
+        </Typography>
 
-      <div className={classes.cardArea}>
-        <CardComponent title="Temperature">
-          <WeatherTemperature max={city?.main.temp_max} min={city?.main.temp_min} loading={loading} />
-        </CardComponent>
+        <div className={classes.cardArea}>
+          <CardComponent title="Temperature">
+            <WeatherTemperature
+              max={city?.main.temp_max}
+              min={city?.main.temp_min}
+              loading={loading}
+            />
+          </CardComponent>
 
-        <CardComponent title="Wind">
-          <WeatherWind direction={city?.wind.deg} velocity={city?.wind.speed} loading={loading} />
-        </CardComponent>
-      </div>
-    </section>
+          <CardComponent title="Wind">
+            <WeatherWind
+              direction={city?.wind.deg}
+              velocity={city?.wind.speed}
+              loading={loading}
+            />
+          </CardComponent>
+        </div>
+      </section>
+
+      {!loading ? (
+        <div className={classes.mapContainer}>
+          <MapsContainer
+            marker={{ lat: city?.coord.lat, lng: city?.coord.lon }}
+            height={600}
+            width="100%"
+            center={{ lat: city?.coord.lat, lng: city?.coord.lon }}
+            zoom={14}
+          />
+        </div>
+      ) : (
+        ""
+      )}
+    </>
   );
 };
 

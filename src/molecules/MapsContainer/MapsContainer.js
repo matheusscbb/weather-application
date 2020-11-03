@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import GoogleMapReact from "google-map-react";
 
 import { makeStyles, CircularProgress } from "@material-ui/core";
@@ -26,14 +26,20 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-  }
+  },
 });
 
 function MapsContainer(props) {
-  const { loading, center, marker, onClickHanlder } = props;
+  const {
+    loading,
+    center,
+    marker,
+    onClickHanlder,
+    height = "calc(100vh - 60px)",
+    width = "100%",
+    zoom = 10,
+  } = props;
   const classes = useStyles();
-
-  const [zoom] = useState(10);
 
   const onMapClicked = (e) => {
     const { lat, lng } = e;
@@ -49,12 +55,12 @@ function MapsContainer(props) {
       <CircularProgress color="secondary" variant="indeterminate" />
     </div>
   ) : (
-    <div style={{ height: "calc(100vh - 60px)", width: "100%" }}>
+    <div style={{ height: height, width: width }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyBRUxIpc53pL-hprG7WvjKY0lX6_Zz1Poc" }}
         defaultCenter={center}
         defaultZoom={zoom}
-        onClick={onMapClicked}
+        onClick={onClickHanlder ? onMapClicked : () => {}}
       >
         <MarkerComponent
           {...marker}
