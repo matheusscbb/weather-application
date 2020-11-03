@@ -20,10 +20,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
   
 # Structure and Components Explanations
 
+## React hooks
+
+Hooks are the new best option for organizing reusable components in a simpler way.  
+They was embraced by community and is becoming the most popular way to use.  
+Others benefits is useEffect and useState, that made easy to control states and circle of life of a component
+
 ## Atomic Design
 
 Is a good and popular way to structure your components, separating in atoms, molecules and organisms to generate cleans pages and make easier to reuse.  
-There is an explanation about all types of components inside your respective folders.
+There is an explanation about all types of components inside your respective folders.  
 
 ## Google Map React
 
@@ -39,6 +45,7 @@ Every request must be separated by type in files inside service folder.
 To combinate with google maps I used material design to customize the components. Using a library like Material or Bootstrap you guarantees a visual pattern and a 
 ready documentation, making easier to teach news members how to create news components.  
 A recommended way to use CSS with Material UI is styled component, besides you earn scoped styles and no-class policy that make easy to not expert CSS members to alter a component without break others, have sass and polished support and possibility to server-side rendering.  
+Materiaul UI can be Themify in future if need some default css differents.
 [Material UI DOC](https://material-ui.com/)
 
 ## Utils
@@ -54,7 +61,18 @@ While the components are loading it is called the skeleton component, making it 
 The most popular, updated and complete, they are working into a new hook-based API, that will be 100% backward compatible, offering an incremental migration.  
 
 
-### Disclamer
+# Disclamer
 
+* I don't have a google maps license, so please don't mind with warning pop up.
 * I chose to create a scalable and more complex project than necessary, aiming to show more about my react knowledge and how to structure it.  
-* DetailsPage isn`t constructed with the best pratice for atomic desing, but this way I can show how I work, first of all is created a page or bigger component, after that all de small components are natural noticed and isolated. That way I prevent to create some unecessary or not useful components.  
+* DetailsPage isn't constructed with the best pratice for atomic desing, but this way I can show how I work, first of all is created a page or bigger component, after that all de small components are natural noticed and isolated. That way I prevent to create some unecessary or not useful components.  
+* I don't put `<Typography/>` material component in all text of custom components, but putting is the right use.
+* To keep a component with a minimum documentation is add a READ.ME for everyone, but this normally isn't accept by the time wasted caring about this files, so another way is commenting all props inside a component. The next step for this project is take one of this option for rule.
+
+# LICENSE
+
+[MIT](https://github.com/matheusscbb/weather-application/blob/master/LICENSE)
+
+
+# Keywords
+None
