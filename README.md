@@ -4,7 +4,12 @@ A simple page where you can find the first fifteen cities, closer some location,
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), is the easiest way to create a scalable and good boilerplate for an react application, on these days there is a lot of components build by community that expect this boilerplate.  
 
-![Examples usage](https://media.giphy.com/media/eyWvXC8UNNquGG1tg9/giphy.gif)
+## Usage example
+### Desktop
+![Desktop usage example](https://media.giphy.com/media/JBMVLHiLMjyAuTaKQe/giphy.gif)
+
+### Mobile
+![Mobile usage example](https://media.giphy.com/media/Fv55AeapPFWdHTiC8E/giphy.gif)
   
 ## Starting an application
 
@@ -13,6 +18,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
   
+# Structure and Components Explanations
+
 ## Atomic Design
 
 Is a good and popular way to structure your components, separating in atoms, molecules and organisms to generate cleans pages and make easier to reuse.  
@@ -31,7 +38,8 @@ Every request must be separated by type in files inside service folder.
 
 To combinate with google maps I used material design to customize the components. Using a library like Material or Bootstrap you guarantees a visual pattern and a 
 ready documentation, making easier to teach news members how to create news components.  
-A recommended way to use CSS with Material UI is styled component, besides you earn scoped styles and no-class policy that make easy to not expert CSS members to alter a component without break others, have sass and polished support and possibility to server-side rendering.
+A recommended way to use CSS with Material UI is styled component, besides you earn scoped styles and no-class policy that make easy to not expert CSS members to alter a component without break others, have sass and polished support and possibility to server-side rendering.  
+[Material UI DOC](https://material-ui.com/)
 
 ## Utils
 
@@ -40,3 +48,13 @@ Files gathering functions and constants that are reusables, separated by context
 ## Skeleton loading
 
 While the components are loading it is called the skeleton component, making it more visually pleasing during the loading.
+
+## React router dom
+
+The most popular, updated and complete, they are working into a new hook-based API, that will be 100% backward compatible, offering an incremental migration.  
+
+
+### Disclamer
+
+* I chose to create a scalable and more complex project than necessary, aiming to show more about my react knowledge and how to structure it.  
+* DetailsPage isn`t constructed with the best pratice for atomic desing, but this way I can show how I work, first of all is created a page or bigger component, after that all de small components are natural noticed and isolated. That way I prevent to create some unecessary or not useful components.  

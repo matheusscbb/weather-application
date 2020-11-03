@@ -5,8 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Google maps loading color */
-  background-color: #e5e3de;
+  /* background-color: #eee; */
 }
 
 code {

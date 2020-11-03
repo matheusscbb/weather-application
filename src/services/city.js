@@ -8,8 +8,10 @@ const config = {
 };
 
 export const getCloserWeatherCities = async (lat, lng) => {
+  // add metric to get right system of temperature
+  // for skill test I create a temparature func on ../utils/tempature.js
   return fetch(
-    `http://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=${lng}&cnt=15&APPID=${API_KEY}`,
+    `http://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=${lng}&units=metric&cnt=15&APPID=${API_KEY}`,
     config
   )
 };

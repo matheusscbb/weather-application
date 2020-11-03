@@ -49,7 +49,7 @@ function MapsContainer(props) {
       <CircularProgress color="secondary" variant="indeterminate" />
     </div>
   ) : (
-    <div style={{ height: "100vh", width: "100%" }}>
+    <div style={{ height: "calc(100vh - 60px)", width: "100%" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyBRUxIpc53pL-hprG7WvjKY0lX6_Zz1Poc" }}
         defaultCenter={center}

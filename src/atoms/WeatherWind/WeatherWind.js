@@ -22,8 +22,8 @@ const useStyles = makeStyles({
   },
 });
 
-const WeatherTemperature = (props) => {
-  const { loading = false, max, min } = props;
+const WeatherWind = (props) => {
+  const { loading = false, direction, velocity } = props;
   const classes = useStyles();
 
   return loading ? (
@@ -41,14 +41,14 @@ const WeatherTemperature = (props) => {
   ) : (
     <article className={classes.weatherContainer}>
       <div>
-        <h4>Min</h4> {min}ºC
+        <h4>Direciton</h4> {direction}º
       </div>
 
       <div>
-        <h4>Max</h4> {max}ºC
+        <h4>Velocity</h4> {velocity}º m/s
       </div>
     </article>
   );
 };
 
-export default WeatherTemperature;
+export default WeatherWind;

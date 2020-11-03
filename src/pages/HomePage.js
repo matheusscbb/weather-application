@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { ENUM_START_LOCATION } from "../utils/constants";
 
-import SearchBar from "../molecules/SearchBar/SearchBar";
+import SearchContainer from "../organisms/SearchContainer/SearchContainer";
 import MapsContainer from "../molecules/MapsContainer/MapsContainer";
 
 const HomePage = () => {
@@ -35,8 +35,8 @@ const HomePage = () => {
   }, []);
 
   return (
-    <>
-      <SearchBar
+    <div>
+      <SearchContainer
         coordinates={marker ? marker : center}
         loading={loading}
       />
@@ -47,7 +47,7 @@ const HomePage = () => {
         marker={marker}
         onClickHanlder={setMarker}
       />
-    </>
+    </div>
   );
 };
 
