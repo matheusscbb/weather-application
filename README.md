@@ -35,7 +35,8 @@ There is an explanation about all types of components inside your respective fol
 
 ## Google Map React
 
-After tried some google maps components I decide use this component. This npm is updated, easy to use with react hooks, have a good documentation and is popular.
+After tried some google maps components I decide use this component. This npm is updated, easy to use with react hooks, have a good documentation and is popular.  
+(npm google-map-react)[https://github.com/google-map-react/google-map-react]
 
 ## Fetch instead Axios
 
