@@ -47,7 +47,7 @@ Every request must be separated by type in files inside service folder.
 To combinate with google maps I used material design to customize the components. Using a library like Material or Bootstrap you guarantees a visual pattern and a 
 ready documentation, making easier to teach news members how to create news components.  
 A recommended way to use CSS with Material UI is styled component, besides you earn scoped styles and no-class policy that make easy to not expert CSS members to alter a component without break others, have sass and polished support and possibility to server-side rendering.  
-Materiaul UI can be Themify in future if need some default css differents.  x
+Materiaul UI can be Themify in future if need some default css differents.  
 You can learn more in [Material UI DOC](https://material-ui.com/).
 
 ## Utils
