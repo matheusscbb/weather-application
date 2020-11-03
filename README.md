@@ -1,8 +1,10 @@
 # Weather application
 
-A simple page where you can find the first fifteen cities, closer some location, weather maximum and minimus temperature, by clicking on map and the button "search".
+A simple page where you can find the first fifteen cities, closer some location, weather maximum and minimus temperature, by clicking on map and the button "search". You can see more details by clicking and one listed city.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), is the easiest way to create a scalable and good boilerplate for an react application, on these days there is a lot of components build by community that expect this boilerplate.  
+The focus of this project is to keep popular concepts and components to make friendly for new developers, without loss efficiency and best practices.
+
+This project was builded with [Create React App](https://github.com/facebook/create-react-app), is the easiest way to create a scalable and good boilerplate for a react application, on these days there is a lot of components build by community that expect this boilerplate.  
 
 ## Usage example
 ### Desktop
