@@ -12,6 +12,13 @@ const HomePage = () => {
 
   useEffect(() => {
     const getCoordinates = async () => {
+      // add timeout to avoid eternal loading
+      const options = {
+        enableHighAccuracy: true,
+        timeout: 3000,
+        maximumAge: 0
+      };
+
       navigator.geolocation.getCurrentPosition(function (position) {
 
         setCenter({
@@ -24,7 +31,11 @@ const HomePage = () => {
           lng: position.coords.longitude,
         });
         setLoading(false);
-      });
+      },
+      function(error) {
+        console.error("Error Code = " + error.code + " - " + error.message);
+        setLoading(false);
+      }, options);
     };
 
     if ("geolocation" in navigator) {

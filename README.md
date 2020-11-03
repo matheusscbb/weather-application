@@ -67,7 +67,7 @@ The most popular, updated and complete, they are working into a new hook-based A
 
 * I don't have a google maps license, so please don't mind with warning pop up.
 * I chose to create a scalable and more complex project than necessary, aiming to show more about my react knowledge and how to structure it.  
-* DetailsPage isn't constructed with the best pratice for atomic desing, but this way I can show how I work, first of all is created a page or bigger component, after that all de small components are natural noticed and isolated. That way I prevent to create some unecessary or not useful components.  
+* DetailsPage ins't constructed with the best pratice for atomic desing, but this way I can show how I work, first of all is created a page or bigger component, after that all de small components are natural noticed and isolated. That way I prevent to create some unecessary or not useful components.  
 * I don't put `<Typography/>` material component in all text of custom components, but putting is the right use.
 * To keep a component with a minimum documentation is add a READ.ME for everyone, but this normally isn't accept by the time wasted caring about this files, so another way is commenting all props inside a component. The next step for this project is take one of this option for rule.  
 * A good improvement for this application is take more care about HTML semanctic and changing the base for Next.js, to get a server side rendering so having better SEO.
