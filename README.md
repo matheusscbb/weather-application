@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Weather application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple page where you can find the first fifteen cities, closer some location, weather maximum and minimus temperature, by clicking on map and the button "search".
 
-## Available Scripts
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), is the easiest way to create a scalable and good boilerplate for an react application, on these days there is a lot of components build by community that expect this boilerplate.  
+  
+## Starting an application
 
-In the project directory, you can run:
-
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  
+## Atomic Design
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Is a good and popular way to structure your components, separating in atoms, molecules and organisms to generate cleans pages and make easier to reuse.  
+There is an explanation about all types of components inside your respective folders.
 
-### `npm test`
+## Google Map React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After tried some google maps components I decide use this component. This npm is updated, easy to use with react hooks, have a good documentation and is popular.
 
-### `npm run build`
+## Fetch instead Axios
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For this application I choose to use fetch api, axios is normally the best options, beacuse is a popular and strong library with a lot of benefits. But for this projetct need just one request, so a native resquest fill our necessity.
+Every request must be separated by type in files inside service folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Materiul ui component and Styled components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To combinate with google maps I used material design to customize the components. Using a library like Material or Bootstrap you guarantees a visual pattern and a 
+ready documentation, making easier to teach news members how to create news components.  
+A recommended way to use CSS with Material UI is styled component, besides you earn scoped styles and no-class policy that make easy to not expert CSS members to alter a component without break others, have sass and polished support and possibility to server-side rendering.
 
-### `npm run eject`
+## Utils
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Files gathering functions and constants that are reusables, separated by context.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Skeleton loading
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+while the components are loading it is called the skeleton component, making it more visually pleasing during the loading
